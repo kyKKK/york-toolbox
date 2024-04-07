@@ -54,11 +54,11 @@ export default function RootLayout({
       </Toolbar>
       <Divider />
       <List>
-        {/* <ListItem disablePadding>
+        <ListItem disablePadding>
           <ListItemButton onClick={() => handleClictDrawerItem("/")}>
             <ListItemText primary="主页" />
           </ListItemButton>
-        </ListItem> */}
+        </ListItem>
         {toolList.map((item) => (
           <ListItem key={item.Id} disablePadding>
             <ListItemButton
@@ -75,7 +75,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <div className="flex min-h-screen flex-col">
+      <div className="flex min-h-screen flex-col bg-white">
         <div>
           <AppBar position="static">
             <Toolbar>
@@ -100,7 +100,6 @@ export default function RootLayout({
             {DrawerList}
           </Drawer>
         </div>
-        {pathName}
         <div>{children}</div>
       </div>
     </html>
